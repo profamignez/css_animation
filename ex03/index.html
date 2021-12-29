@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações - WDEV</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+     .container {
+         width: 300px;
+         height: 300px;
+         position: relative;
+    }
+
+     .relogio,
+     .horas,
+     .minutos {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .minutos {
+        animation: girarponteiro 5s linear infinite;
+    }
+
+    .horas {
+        animation: girarponteiro 60s linear infinite;
+    }
+
+    @keyframes girarponteiro {
+        from {transform: rotateZ(0deg);}
+        to {transform: rotateZ(360deg);} 
+     
+    }
+
+    
+    </style>
+</head>
+<body>
+    <h1>Relógio</h1>
+
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/william-costa/wdev-mock-css-animation-resources/master/assets/images/clock.svg" alt="relogio" class="relogio">
+        
+        <img src="https://raw.githubusercontent.com/william-costa/wdev-mock-css-animation-resources/master/assets/images/hour.svg" alt="horas" class="horas">
+
+        <img src="https://raw.githubusercontent.com/william-costa/wdev-mock-css-animation-resources/master/assets/images/minute.svg" alt="minutos" class="minutos">
+    </div>
+
+    
+
+</body>
+</html>
